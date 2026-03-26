@@ -1,5 +1,9 @@
 package com.example.bancodedadossqlite.datamodel;
 
+import android.util.Log;
+
+import com.example.bancodedadossqlite.api.AppUtil;
+
 public class ClienteDataModel {
     // passo 1 - atributo nome da tabela
     public static final String TABELA = "cliente";
@@ -20,6 +24,7 @@ public class ClienteDataModel {
         queryCriarTabela += EMAIL + " TEXT";
         queryCriarTabela += ")";
 
+        Log.i(AppUtil.TAG , "ClienteDAtaModel: " + queryCriarTabela);
         return queryCriarTabela;
     }
 

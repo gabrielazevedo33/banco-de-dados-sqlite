@@ -8,8 +8,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.fabio.bancodedadossqlite.R;
-import com.fabio.bancodedadossqlite.controller.ClienteController;
+import com.example.bancodedadossqlite.R;
+import com.example.bancodedadossqlite.controller.ClienteController;
 
 public class MainActivity extends AppCompatActivity {
     ClienteController clienteController;

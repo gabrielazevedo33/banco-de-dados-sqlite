@@ -8,19 +8,23 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
-import com.fabio.bancodedadossqlite.api.AppUtil;
+import com.example.bancodedadossqlite.datamodel.ClienteDataModel;
+import com.example.bancodedadossqlite.api.AppUtil;
 
 public class AppDataBase extends SQLiteOpenHelper {
 
     public static final String DB_NAME = "Loja.sqlite";
     public static int version = 1;
+    SQLiteDatabase db;
     public AppDataBase( Context context ) {
         super(context, DB_NAME, null, version);
         Log.i(AppUtil.TAG, "AppDataBase: Conectando o banco");
+        db = getWritableDatabase();
     }
 
     @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+    public void onCreate(SQLiteDatabase db) {
+        db.execSQL(ClienteDataModel.criarTabela());
 
     }
 
